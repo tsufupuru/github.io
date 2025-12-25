@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>あなたのＨＰタイトル</title>
-<meta name="keywords" content="ページのキーワードA,B,C">
-<meta name="description" content="ページの説明">
+<title>完全匿名目安箱 - 高等学校用</title>
+<meta name="keywords" content="匿名,目安箱,学校,意見,提案">
+<meta name="description" content="完全匿名で意見や提案を投稿できる目安箱です">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,30 +12,74 @@
 <div id="outer">
 <header>
 <div class="header-inner">
-<h1>あなたのＨＰタイトル</h1>
-<p>あなたのＨＰの説明文</p>
+<h1>🔒 完全匿名目安箱</h1>
+<p>あなたの意見を安心して投稿してください。完全匿名で誰が投稿したかは一切記録されません。</p>
 </div>
 </header>
 <div id="content">
 <div class="inner">
-<h2>記事ページ見出し・大</h2>
-<p>文章あれこれ</p>
-<h3>記事ページ見出し・中</h3>
-<p>文章あれこれ</p>
-<h4>記事ページ見出し・小</h4>
-<p>文章あれこれ</p>
+<h2>📝 意見・提案を投稿する</h2>
+<div class="submission-form">
+<form id="suggestionForm">
+<div class="form-group">
+<label for="category">カテゴリー</label>
+<select id="category" name="category" required>
+<option value="">選択してください</option>
+<option value="学習">学習・授業について</option>
+<option value="施設">施設・設備について</option>
+<option value="イベント">学校イベントについて</option>
+<option value="人間関係">人間関係について</option>
+<option value="その他">その他</option>
+</select>
 </div>
-<aside>
-<div class="left-title">サイドバータイトル</div>
-<div class="link">
+<div class="form-group">
+<label for="message">メッセージ（最大500文字）</label>
+<textarea id="message" name="message" rows="8" maxlength="500" required placeholder="ご意見やご提案をお書きください..."></textarea>
+<div class="char-count">
+<span id="charCount">0</span> / 500
+</div>
+</div>
+<div class="anonymous-note">
+<p>⚠️ <strong>匿名性について</strong></p>
 <ul>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
+<li>このフォームからの投稿は完全匿名です</li>
+<li>IPアドレスや個人情報は一切記録されません</li>
+<li>安心してご意見をお寄せください</li>
 </ul>
 </div>
-</aside>
+<button type="submit" class="submit-btn">📮 匿名で投稿する</button>
+</form>
+<div id="successMessage" class="success-message" style="display: none;">
+<p>✅ 投稿が完了しました。ご意見ありがとうございます。</p>
 </div>
-<footer>© 2010 あなたのホームページ</footer>
 </div>
+
+<h2>💬 最近の投稿</h2>
+<div id="suggestionsList" class="suggestions-list">
+<p class="no-suggestions">まだ投稿がありません。最初の投稿をお待ちしています。</p>
+</div>
+</div>
+<aside>
+<div class="left-title">📋 使い方</div>
+<div class="link">
+<ul>
+<li>カテゴリーを選択</li>
+<li>メッセージを入力</li>
+<li>投稿ボタンをクリック</li>
+</ul>
+</div>
+<div class="left-title">🔐 安全性</div>
+<div class="info-text">
+<p>このシステムは完全匿名です。投稿者の特定は技術的に不可能です。</p>
+</div>
+<div class="left-title">📊 統計</div>
+<div class="stats">
+<p>総投稿数: <span id="totalCount">0</span></p>
+</div>
+</div>
+</div>
+<footer>© 2025 完全匿名目安箱</footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
